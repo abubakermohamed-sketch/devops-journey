@@ -13,10 +13,11 @@ def classify_server(server_name):
 def main():
     with open("servers.txt", "r") as f:
         servers = f.read().splitlines()  # splitlines removes the \n from each line
+    with open("report.txt","w") as s:
 
-    for server in servers:
-        server_type = classify_server(server)
-        print(f"{server} -> {server_type}")
+        for server in servers:
+           server_type = classify_server(server)
+           s.write(f"{server} -> {server_type}\n")
 
     print(f"\nTotal servers processed: {len(servers)}")
 
