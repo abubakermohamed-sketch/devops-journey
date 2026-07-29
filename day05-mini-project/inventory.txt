@@ -1,0 +1,9 @@
+web-01
+web-02
+web-03
+db-01
+db-02
+cache-01
+cache-02
+lb-01
+mail-01

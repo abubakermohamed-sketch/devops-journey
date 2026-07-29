@@ -1,0 +1,11 @@
+web-01 -> Web Server
+web-02 -> Web Server
+web-03 -> Web Server
+db-01 -> Database Server
+db-02 -> Database Server
+cache-01 -> Cache Server
+cache-02 -> Cache Server
+lb-01 -> Load Balancer
+mail-01 -> Mail Server
+
+Summary: {'Web Server': 3, 'Database Server': 2, 'Cache Server': 2, 'Load Balancer': 1, 'Mail Server': 1}
