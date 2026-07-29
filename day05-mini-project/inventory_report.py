@@ -21,8 +21,7 @@ def count_by_type(servers):
   
    for server in servers:
      if "web" in server:
-        counts["Web Server"] = counts.get("Web Server", 0) + 1
-        print( "Hello")  
+        counts["Web Server"] = counts.get("Web Server", 0) + 1  
      elif "db" in server:
         counts["Database Server"] = counts.get("Database Server", 0) + 1
      elif "cache" in server:
@@ -36,18 +35,12 @@ def count_by_type(servers):
 def main():
 
     with open("inventory.txt","r") as f:
-        server_name=[]
         servers=f.read().splitlines()
     for server in servers:     
-        
         server_type=  classify_server(server)
-        server_name.append(server_type)
-       # print(server_name)
     with open("report.txt", "w") as s:
      for server in servers:
-        server_type = classify_server(server)  # recompute here
         s.write(f"{server} -> {server_type}\n")
-        
      s.write(f"\nSummary: {count_by_type(servers)}\n")
     print(f"\nTotal servers processed: {len(servers)}")
 
