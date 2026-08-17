@@ -1,0 +1,1 @@
+2026-08-17 15:42:21.770863:Instance_id is: i-0d40b26d4a2422cd7, state is: stopped, name is: My-first-server
