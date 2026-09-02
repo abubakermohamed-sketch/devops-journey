@@ -11,6 +11,7 @@ def classify_server(name):
 
 
 def main():
+    print("Testing a bind mount!")
     with open("inventory.txt", "r") as f:
         servers = f.read().splitlines()
 

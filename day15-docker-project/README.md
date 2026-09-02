@@ -17,3 +17,6 @@ docker run inventory-reporter
 - Image immutability — rebuilding is required to pick up local code changes
 - Dockerfile basics: FROM, WORKDIR, COPY, CMD
 - `docker cp` to extract files from a stopped container
+
+## Day 17 update: Bind mounts
+Used --mount type=bind to connect host and container filesystems, solving the report.txt isolation issue. Learned bind mounts vs named volumes, and why production favors immutable images over bind mounts.
