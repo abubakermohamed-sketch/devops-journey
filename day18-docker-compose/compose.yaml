@@ -1,0 +1,20 @@
+services:
+  reporter:
+    build: .
+    volumes:
+      - .:/app
+    container_name: inventory-reporter-app
+
+  database:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: learningpassword
+      POSTGRES_USER: mohamed
+      POSTGRES_DB: devops_journey
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
